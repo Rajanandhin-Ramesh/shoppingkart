@@ -3,9 +3,11 @@ package com.ecommerce.online_shoppingcart.security.request;
 import java.util.Set;
 
 import jakarta.validation.constraints.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class SignupRequest {
     @NotBlank
     @Size(min = 3, max = 20)

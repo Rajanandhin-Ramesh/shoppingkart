@@ -136,6 +136,9 @@ public class CartServiceImpl implements CartService{
 
         String emailId = authUtil.loggedInEmail();
         Cart userCart = cartRepository.findCartByEmail(emailId);
+        if (userCart == null) {
+            throw new ResourceNotFoundException("Cart", "emailId", emailId);
+        }
         Long cartId  = userCart.getCartId();
 
         Cart cart = cartRepository.findById(cartId)

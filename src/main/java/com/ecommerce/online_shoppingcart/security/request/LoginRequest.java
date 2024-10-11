@@ -1,7 +1,11 @@
 package com.ecommerce.online_shoppingcart.security.request;
 
 import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
+@AllArgsConstructor
+@Data
 public class LoginRequest {
     @NotBlank
     private String username;

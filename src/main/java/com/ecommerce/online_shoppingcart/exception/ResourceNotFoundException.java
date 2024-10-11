@@ -1,5 +1,8 @@
 package com.ecommerce.online_shoppingcart.exception;
 
+import lombok.Data;
+
+@Data
 public class ResourceNotFoundException extends RuntimeException {
     String resourceName;
     String field;
